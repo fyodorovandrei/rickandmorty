@@ -2,11 +2,15 @@ import React from 'react';
 import { ReactComponent as Background } from '../assets/icon-flat.svg';
 import styles from './MainTitle.module.scss';
 
-const MainTitle: React.FC = () => {
+export interface MainTitleProps {
+    title: string;
+}
+
+const MainTitle: React.FC<MainTitleProps> = ({ title }) => {
     return (
         <div className={styles.mainTitle}>
             <Background />
-            <h1 className={styles.title}>The Rick and Morty</h1>
+            <h1 className={styles.title}>{title}</h1>
         </div>
     );
 };

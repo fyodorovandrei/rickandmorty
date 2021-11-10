@@ -4,7 +4,7 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <MainTitle />
+            <MainTitle title="The Rick and Morty" />
         </div>
     );
 }
