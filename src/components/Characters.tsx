@@ -38,6 +38,7 @@ const Characters: React.FC = () => {
     }, [pagination.current]);
 
     const handleOnChangePagination = (page: number) => {
+        window.scroll(0, 0);
         setPagination((oldPagination) => ({
             ...oldPagination,
             current: page
