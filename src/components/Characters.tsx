@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Row, Col, Pagination, Spin } from 'antd';
 import axios from '../utils/axios';
 import Character from './Character';
+import retrieveId from '../utils/retrieve-id';
 
 import styles from './Characters.module.scss';
-import retrieveId from '../utils/retrieve-id';
 
 interface PaginationState {
     current: number;
