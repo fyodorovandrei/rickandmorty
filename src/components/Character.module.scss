@@ -38,8 +38,10 @@
 				.statusBadge {
 					background: rgb(214, 61, 46);
 				}
+			}
 
-				.statusAlive {
+			&.statusAlive {
+				.statusBadge {
 					background: rgb(85, 204, 68);
 				}
 			}
