@@ -58,9 +58,15 @@ const Character: React.FC<CharacterProps> = ({
     const [event, setEvent] = useState<Event | undefined>(undefined);
 
     useEffect(() => {
-        axios.get(`/episode/${firstEpisode}`).then((res) => {
-            setEvent(res.data);
-        });
+        if (firstEpisode) {
+            axios.get(`/episode/${firstEpisode}`).then((res) => {
+                setEvent(res.data);
+            });
+        } else {
+            setEvent({
+                name: '--'
+            });
+        }
     }, [firstEpisode]);
 
     const [location, setLocation] = useState<Location | undefined>(undefined);
