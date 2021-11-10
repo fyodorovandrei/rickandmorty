@@ -4,6 +4,7 @@ import axios from '../utils/axios';
 import Character from './Character';
 
 import styles from './Characters.module.scss';
+import retrieveId from '../utils/retrieve-id';
 
 interface Pagination {
     current: number;
@@ -43,8 +44,8 @@ const Characters: React.FC = () => {
                             avatar={character.image}
                             status={character.status}
                             species={character.species}
-                            location={character.location.name}
-                            seen="The Wedding Squanchers"
+                            locationId={retrieveId(character.location.url) || undefined}
+                            firstEpisode={retrieveId(character.episode[0])}
                         />
                     </Col>
                 ))}
