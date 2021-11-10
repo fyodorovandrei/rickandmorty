@@ -84,10 +84,10 @@ const Character: React.FC<CharacterProps> = ({
     return (
         <div className={styles.character}>
             <Row gutter={12}>
-                <Col span={8}>
+                <Col xxl={8} xl={8} lg={8} md={8} sm={24} className={styles.imageCol}>
                     <img className={styles.image} src={avatar} alt={title} />
                 </Col>
-                <Col span={16}>
+                <Col xxl={16} xl={16} lg={16} md={16} sm={24}>
                     <div className={styles.content}>
                         <Row>
                             <Col span={24}>
